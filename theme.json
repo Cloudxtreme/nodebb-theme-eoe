@@ -1,7 +1,8 @@
 {
-    "id": "nodebb-theme-vanilla",
-    "name": "NodeBB Vanilla",
+    "id": "nodebb-theme-eoe",
+    "name": "NodeBB EoE",
     "description": "Vanilla Theme for NodeBB",
     "url": "https://github.com/NodeBB/nodebb-theme-vanilla",
-    "screenshot": "screenshot.png"
+    "screenshot": "screenshot.png",
+    "templates": "templates"
 }
