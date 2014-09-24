@@ -34,11 +34,11 @@
 						<!-- IF categories.bgColor -->background-color: {categories.bgColor};<!-- ENDIF categories.bgColor -->
 					"
 				>
-					<div id="category-{categories.cid}" class="category-slider-{categories.post_count}">
+					<div id="category-{categories.cid}" class="category-slider-{categories.post_count}" style="
+							<!-- IF categories.bgColor -->background-color: {categories.bgColor}; border-color: {categories.bgColor};<!-- ENDIF categories.bgColor -->
+						">
 						<!-- IF categories.icon -->
-						<div class="category-box icon-container" style="
-							<!-- IF categories.bgColor -->background-color: {categories.bgColor}; border-left-color: {categories.bgColor}; border-right-color: {categories.bgColor}; <!-- ENDIF categories.bgColor -->
-						"><i class="fa {categories.icon} fa-4x"></i></div>
+						<div class="category-box icon-container"><i class="fa {categories.icon} fa-4x"></i></div>
 						<!-- ENDIF categories.icon -->
 						<div class="category-box description-container" itemprop="description">{categories.description}</div>
 
