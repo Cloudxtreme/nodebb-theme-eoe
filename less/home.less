@@ -1,3 +1,5 @@
+@translucent-grey: rgba(20%, 20%, 20%, .7);
+
 .triangle-right {
 	border-right: 0;
 	left: 100%;
@@ -63,7 +65,20 @@
 			height:110px;
 			position: relative;
 			top: -25px;
-			padding: 2em ;
+			padding: 2em;
+
+			&.description-container { 
+				top: 55px;
+				padding:0;
+				height:auto;
+
+				@media (max-width:768px) {
+					background-color: @translucent-grey;
+					padding: .5em;
+					top: 51px;
+					border-radius: 5px 5px 0 0;
+				}
+			}
 
 			&.icon-container {
 				border-color: inherit;
