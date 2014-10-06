@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Lusitana:400,700);
 @translucent-grey: rgba(20%, 20%, 20%, .7);
 
 .triangle-right {
@@ -9,21 +10,47 @@
 	right: 100%;
 }
 
-.home {
+.home, .subcategories {
 	h4 {
-		width: 100%;
+		width: auto;
+		font-family: 'Lusitana', serif;
+		position: absolute;
+		bottom: 25px;
 		font-weight: 700;
-		line-height: 21px;
+		font-size: 28px;
 		text-align: left;
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
 		display: inline-block;
 		margin: 0;
+		z-index:1; // Prevents hovers from overlapping the title
+		a {
+			color: white;
+		}
+		@media (max-width:1024px) {
+			top: 1.25em;
+			bottom: auto;
+		}	
+	}
+
+	.category-info {
+		position: absolute;
+		top: .5em;
+		left: 2em;
+		z-index: 1; // Prevents hovers from overlapping the title
 	}
 
 	[data-cid] {
 		&:nth-child(odd) {
+		// Right sided categories
+			h4 {
+				right: 500px;
+				@media (max-width:1024px) {
+					left: 1em;
+					right: auto;
+				}	
+			}
 			.icon {
 				.category-box {
 					float: right;
@@ -35,6 +62,14 @@
 		}
 
 		&:nth-child(even) {
+		// Left sided categories
+			h4 {
+				left: 500px;
+				@media (max-width:1024px) {
+					right: 1em;
+					left: auto;
+				}	
+			}
 			.icon {
 				.category-box {
 					float: left;
@@ -55,6 +90,10 @@
 		.pointer;
 		margin-bottom: 10px;
 		overflow:hidden;
+
+		&.category-header {
+			margin-bottom: 0;
+		}
 		
 		&:hover {
 			filter: brightness(115%);

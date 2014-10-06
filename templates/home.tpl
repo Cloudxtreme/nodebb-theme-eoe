@@ -7,11 +7,10 @@
 		<!-- BEGIN categories -->
 		<div class="{categories.class}" data-cid="{categories.cid}" data-numRecentReplies="{categories.numRecentReplies}">
 			<meta itemprop="name" content="{categories.name}">
+			<!-- IF !categories.link -->
+				<span class="category-info badge {categories.unread-class}"><i class="fa fa-book" data-toggle="tooltip" title="[[global:topics]]"></i> <span class="human-readable-number" title="{categories.topic_count}">{categories.topic_count}</span>&nbsp; <i class="fa fa-pencil" data-toggle="tooltip" title="[[global:posts]]"></i> <span class="human-readable-number" title="{categories.post_count}">{categories.post_count}</span></span>
+			<!-- ENDIF !categories.link -->
 			<h4>
-				<!-- IF !categories.link -->
-				<span class="badge {categories.unread-class}">{categories.topic_count} </span>
-				<!-- ENDIF !categories.link -->
-
 				<!-- IF categories.link -->
 				<a href="{categories.link}" itemprop="url" target="_blank">
 				<!-- ELSE -->
@@ -28,13 +27,13 @@
 			<!-- ENDIF categories.link -->
 				<div
 					id="category-{categories.cid}" class="category-header icon category-header-image-{categories.imageClass}"
-					title="{categories.description}"
+					
 					style="
 						<!-- IF categories.backgroundImage -->background-image: url({categories.backgroundImage});<!-- ENDIF categories.backgroundImage -->
 						<!-- IF categories.bgColor -->background-color: {categories.bgColor};<!-- ENDIF categories.bgColor -->
 					"
 				>
-					<div id="category-{categories.cid}" class="category-slider-{categories.post_count}" style="
+					<div class="category-slider-{categories.post_count}" style="
 							<!-- IF categories.bgColor -->background-color: {categories.bgColor}; border-color: {categories.bgColor};<!-- ENDIF categories.bgColor -->
 						">
 						<!-- IF categories.icon -->
