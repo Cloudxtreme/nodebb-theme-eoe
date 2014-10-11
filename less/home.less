@@ -1,12 +1,20 @@
 @import url(http://fonts.googleapis.com/css?family=Lusitana:400,700);
 @translucent-grey: rgba(20%, 20%, 20%, .7);
 
+.triangle-defaults {
+	border-color: transparent;
+}
+
 .triangle-right {
+	.triangle-defaults;
 	border-right: 0;
+	border-left-color: inherit;
 	left: 100%;
 }
 .triangle-left {
+	.triangle-defaults;
 	border-left: 0;
+	border-right-color: inherit;
 	right: 100%;
 }
 
@@ -42,6 +50,14 @@
 	}
 
 	[data-cid] {
+		padding: 5px;
+		padding-top: 0px;
+		background-color: @gray-dark;
+
+		&:first-child{
+			padding-top: 5px;
+		}
+
 		&:nth-child(odd) {
 		// Right sided categories
 			h4 {
